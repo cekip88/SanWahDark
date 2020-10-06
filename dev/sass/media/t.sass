@@ -1,0 +1,37 @@
+$unit: 'px'
+.section
+  +w($tablet#{$unit})
+  margin: 0 auto
+
+.head
+  &-top
+    padding: 0
+  &-logo
+    top: 20px
+  &-line
+    display: flex
+    padding: 0 20px
+  &-burger
+    display: none
+  &-nav
+    position: static
+    transform: translateX(0)
+    padding-top: 40px
+  &-list
+    display: flex
+    align-items: center
+  &-item
+    margin-right: 30px
+    font-size: 16px
+    &:first-child
+      margin-left: auto
+    &:last-child
+      margin-right: 0
+    a
+      border-bottom: none
+      padding: 15px 0
+      svg
+        +wh(auto,20px)
+        display: block
+      span
+        display: none

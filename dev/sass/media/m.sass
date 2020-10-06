@@ -1,0 +1,60 @@
+$unit: 'px'
+.section
+  +w(100%)
+
+.head
+  background-color: $dark-gray
+  position: relative
+  a
+    color: $white
+  &-top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 25px 10px
+  &-logo
+    +wh(100px)
+    +dfc
+    position: absolute
+    top: 10px
+    color: $white
+    background-color: $orange
+    z-index: 100
+    &-border
+      +wh(80px)
+      +dfc
+      flex-direction: column
+      border: 3px solid $white
+      span
+        font-size: 20px
+        &:first-child
+          font-family: $f_chines
+          font-size: 17px
+  &-burger
+    +wh(32px)
+    margin-left: auto
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 5px
+    &:before,&:after,span
+      +af
+      +wh(100%,2px)
+      background-color: $white
+  &-nav
+    +w(100%)
+    position: absolute
+    background-color: $dark-gray
+    transition: .2s ease
+    padding-top: 30px
+    transform: translateX(-100%)
+  &-item a
+    display: block
+    padding: 15px 20px
+    border-bottom: 1px solid $white
+    svg
+      display: none
+      fill: $white
+  &-active
+    .head-nav
+      transform: translateX(0)

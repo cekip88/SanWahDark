@@ -1,0 +1,34 @@
+$unit: 'px'
+.section
+  +w(100%)
+
+.head
+  &-line
+    padding: 0 118px 0 83px
+  &-logo
+    +wh(203px)
+    top: 44px
+    transition: .2s ease
+    &-border
+      +wh(161px)
+      border: 6px solid $white
+      span
+        font-size: 40px
+        &:first-child
+          font-size: 33px
+    &:hover
+      transform: scale(1.15)
+  &-nav
+    padding: 87px 0 33px
+  &-item
+    font-size: 25px
+    a
+      padding: 0
+      &,svg
+        transition: .2s ease
+      svg
+        height: auto
+      &:hover
+        color: $orange
+        svg
+          fill: $orange
