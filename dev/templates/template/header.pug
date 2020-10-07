@@ -1,4 +1,8 @@
 header.head
+    section.head-orange
+        a(href='#')
+            include ../../img/rupor.svg
+            span Vrijdag tot er met maandag zijn onze openingstijden aangepast
     section.section.head-line
         .head-top
             a(href='#').head-logo
@@ -8,6 +12,10 @@ header.head
                     span WAH
             button.head-burger
                 span
+            a(href='#').head-button
+                include ../../img/cart.svg
+            a(href='#').head-button
+                include ../../img/f.svg
         nav.head-nav
             ul.head-list
                 li.head-item
@@ -20,11 +28,9 @@ header.head
                     a(href='#') Nieuws
                 li.head-item
                     a(href='#') Contact
-                li.head-item
+                li.head-item.head-mobile-none
                     a(href='#')
                         include ../../img/cart.svg
-                        span Cart
-                li.head-item
+                li.head-item.head-mobile-none
                     a(href='#')
                         include ../../img/f.svg
-                        span Facebook

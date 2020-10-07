@@ -1,52 +1,82 @@
 $unit: 'px'
+#page-container
+  padding-top: 0!important
+
 .section
   +w(100%)
 
 .head
   background-color: $dark-gray
   position: relative
+  &-orange
+    +font(9px,$f_reg,$white)
+    height: 33px
+    position: relative
+    z-index: 1000
+    a
+      +dfc
+      +wh(100%)
+      background-color: $light-orange
+      padding: 0 10px
+    svg
+      fill: $white
+      margin-right: 8px
+  &-mobile-none
+    display: none
+  &-button
+    margin-left: 15px
+    svg
+      fill: $white
+    &:nth-child(3)
+      height: 22px
+    &:last-child
+      height: 23.5px
   a
     color: $white
   &-top
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 25px 10px
+    position: relative
+    padding: 24px 30px 23.5px 23px
   &-logo
-    +wh(100px)
+    +wh(107px)
     +dfc
     position: absolute
-    top: 10px
+    top: 0
     color: $white
     background-color: $orange
     z-index: 100
     &-border
-      +wh(80px)
+      +wh(84px)
       +dfc
       flex-direction: column
       border: 3px solid $white
       span
+        font-family: $f_bold
         font-size: 20px
         &:first-child
           font-family: $f_chines
-          font-size: 17px
+          font-size: 16px
   &-burger
-    +wh(32px)
+    +wh(24px,18px)
     margin-left: auto
     display: flex
     flex-direction: column
     justify-content: space-between
-    padding: 5px
     &:before,&:after,span
       +af
-      +wh(100%,2px)
+      +wh(100%,3px)
+      border-radius: 1.5px
       background-color: $white
+      transition: .2s ease
   &-nav
     +w(100%)
     position: absolute
+    z-index: 10
     background-color: $dark-gray
     transition: .2s ease
-    padding-top: 30px
+    padding-top: 40px
     transform: translateX(-100%)
   &-item a
     display: block
@@ -58,3 +88,11 @@ $unit: 'px'
   &-active
     .head-nav
       transform: translateX(0)
+    .head-burger
+      span
+        opacity: 0
+        visibility: hidden
+      &:before
+        transform: rotate(45deg) translate(4px,5px)
+      &:after
+        transform: rotate(-45deg) translate(6px,-6px)

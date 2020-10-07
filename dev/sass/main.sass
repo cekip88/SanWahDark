@@ -2,6 +2,7 @@
 @import "../../../../core/mixins/mixins"
 @import "vars"
 $font_body: 14px
++font_inc($f_reg,'Montserrat-Regular.ttf')
 +font_inc($f_bold,'Montserrat-Bold.ttf')
 +font_inc($f_semi,'Montserrat-Medium.ttf')
 +font_inc($f_chines,'HanyiSentyPailouArch.ttf')
@@ -17,6 +18,10 @@ body
 input,button
 	font-family: inherit
 	font-size: inherit
+
+svg
+	max-height: 100%
+	width: auto
 
 input
 	background-color: transparent
